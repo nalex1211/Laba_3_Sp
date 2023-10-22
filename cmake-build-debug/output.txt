@@ -1,0 +1,90 @@
+< //test , COMMENT >
+< fun , KEYWORD >
+< main , KEYWORD >
+< ( , PUNCTUATION >
+< args , KEYWORD >
+< : , PUNCTUATION >
+< Array , KEYWORD >
+< < , OPERATOR >
+< String , KEYWORD >
+< > , OPERATOR >
+< ) , PUNCTUATION >
+< { , PUNCTUATION >
+< // Variable declarations , COMMENT >
+< val , KEYWORD >
+< number , IDENTIFIER >
+< = , OPERATOR >
+< 1234 , NUMBER >
+< val , KEYWORD >
+< invalidNumber , IDENTIFIER >
+< = , OPERATOR >
+< 123.456.789 , NUMBER >
+< val , KEYWORD >
+< text , IDENTIFIER >
+< = , OPERATOR >
+< "Hello Kotlin" , STRING >
+< fasdfasdfasd , ERROR >
+< gsdfgsdfgdf , ERROR >
+< // Conditional statement , COMMENT >
+< if , KEYWORD >
+< ( , PUNCTUATION >
+< number , ERROR >
+< > , OPERATOR >
+< 100 , NUMBER >
+< ) , PUNCTUATION >
+< { , PUNCTUATION >
+< println , KEYWORD >
+< ( , PUNCTUATION >
+< "Number is greater than 100." , STRING >
+< ) , PUNCTUATION >
+< } , PUNCTUATION >
+< elif , ERROR >
+< ( , PUNCTUATION >
+< number , ERROR >
+< < , OPERATOR >
+< 100 , NUMBER >
+< ) , PUNCTUATION >
+< { , PUNCTUATION >
+< println , KEYWORD >
+< ( , PUNCTUATION >
+< "Number is less than 100." , STRING >
+< ) , PUNCTUATION >
+< } , PUNCTUATION >
+< else , KEYWORD >
+< { , PUNCTUATION >
+< println , KEYWORD >
+< ( , PUNCTUATION >
+< "Number is exactly 100." , STRING >
+< ) , PUNCTUATION >
+< } , PUNCTUATION >
+< // Loop , COMMENT >
+< for , KEYWORD >
+< ( , PUNCTUATION >
+< i , ERROR >
+< in , KEYWORD >
+< 1..5 , NUMBER >
+< ) , PUNCTUATION >
+< { , PUNCTUATION >
+< printn , ERROR >
+< ( , PUNCTUATION >
+< i , ERROR >
+< ) , PUNCTUATION >
+< } , PUNCTUATION >
+< // Undefined function , COMMENT >
+< someInvalidFunction , ERROR >
+< ( , PUNCTUATION >
+< ) , PUNCTUATION >
+< } , PUNCTUATION >
+< fun , KEYWORD >
+< greet , ERROR >
+< ( , PUNCTUATION >
+< name , ERROR >
+< : , PUNCTUATION >
+< String , KEYWORD >
+< ) , PUNCTUATION >
+< { , PUNCTUATION >
+< println , KEYWORD >
+< ( , PUNCTUATION >
+< "Hello, $name!" , STRING >
+< ) , PUNCTUATION >
+< } , PUNCTUATION >

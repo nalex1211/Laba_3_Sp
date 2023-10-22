@@ -1,0 +1,31 @@
+//test
+
+fun main(args: Array<String>) {
+    // Variable declarations
+    val number = 1234
+    val invalidNumber = 123.456.789
+    val text = "Hello Kotlin"
+fasdfasdfasd
+
+gsdfgsdfgdf
+    // Conditional statement
+    if (number > 100) {
+        println("Number is greater than 100.")
+    } elif (number < 100) {
+        println("Number is less than 100.")
+    } else {
+        println("Number is exactly 100.")
+    }
+
+    // Loop
+    for (i in 1..5) {
+        printn(i)
+    }
+
+    // Undefined function
+    someInvalidFunction()
+}
+
+fun greet(name: String) {
+    println("Hello, $name!")
+}
