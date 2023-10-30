@@ -3,11 +3,11 @@
 fun main(args: Array<String>) {
     // Variable declarations
     val number = 1234
-    val invalidNumber = 123.456.789
+    val invalidNumber = 123.456
     val text = "Hello Kotlin"
-fasdfasdfasd
-
-gsdfgsdfgdf
+    fasdfasdfasd
+    val num =  0x4b
+    gsdfgsdfgdf
     // Conditional statement
     if (number > 100) {
         println("Number is greater than 100.")

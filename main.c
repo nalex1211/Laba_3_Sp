@@ -95,6 +95,23 @@ void lexer(FILE *input, FILE *output) {
             }
         }
 
+        if (ch == '0') {
+            char next_ch = fgetc(input);
+            if (next_ch == 'x' || next_ch == 'X') {
+                buffer[buffer_index++] = ch;
+                buffer[buffer_index++] = next_ch;
+                while (isxdigit(ch = fgetc(input))) {
+                    buffer[buffer_index++] = ch;
+                }
+                buffer[buffer_index] = '\0';
+                fprintf(output, "< %s , HEXADECIMAL NUMBER >\n", buffer);
+                ungetc(ch, input);
+                continue;
+            } else {
+                ungetc(next_ch, input);
+            }
+        }
+
         if (isdigit(ch)) {
             do {
                 buffer[buffer_index++] = ch;
@@ -174,32 +191,32 @@ void lexer(FILE *input, FILE *output) {
 }
 
 int main() {
-    FILE *input = fopen("input.txt", "r");
-    if (!input) {
-        char choice;
-        printf("Error opening file %s\n", "input.txt");
-        do {
-            printf("Do you want to try again (y/n)? ");
-            scanf(" %c", &choice);
+    char filepath[256];
+    strcpy(filepath, "input.txt");
+    FILE *input = fopen(filepath, "r");
 
-            if (choice == 'y' || choice == 'Y') {
-                input = fopen("input.txt", "r");
-                if (input) {
-                    break;
-                } else {
-                    printf("Error reopening file %s\n", "input.txt");
-                }
-            } else if (choice == 'n' || choice == 'N') {
-                return false;
-            }
-        } while (choice != 'y' && choice != 'Y' && choice != 'n' && choice != 'N' || !input);
+    while (!input) {
+        printf("Error opening file %s\n", filepath);
+        printf("Enter the full path to the file, or 'n' to exit: ");
+        fgets(filepath, sizeof(filepath), stdin);
+        size_t len = strlen(filepath);
+        if (len > 0 && filepath[len - 1] == '\n') {
+            filepath[len - 1] = '\0';
+        }
+        if (strcmp(filepath, "n") == 0 || strcmp(filepath, "N") == 0) {
+            return 1;
+        }
+
+        input = fopen(filepath, "r");
     }
+
     FILE *output = fopen("output.txt", "w");
 
     lexer(input, output);
-
     fclose(input);
     fclose(output);
+    printf("Program was completed successfully");
 
     return 0;
 }
+

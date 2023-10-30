@@ -18,12 +18,16 @@
 < val , KEYWORD >
 < invalidNumber , IDENTIFIER >
 < = , OPERATOR >
-< 123.456.789 , NUMBER >
+< 123.456 , NUMBER >
 < val , KEYWORD >
 < text , IDENTIFIER >
 < = , OPERATOR >
 < "Hello Kotlin" , STRING >
 < fasdfasdfasd , ERROR >
+< val , KEYWORD >
+< num , IDENTIFIER >
+< = , OPERATOR >
+< 0x4b , HEXADECIMAL NUMBER >
 < gsdfgsdfgdf , ERROR >
 < // Conditional statement , COMMENT >
 < if , KEYWORD >
